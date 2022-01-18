@@ -7,13 +7,29 @@ class App extends React.Component {
     };
   }
 
-  handleChangeInput(event) {
-    // this.state.searchKeyword = event.target.value;
-    // this.forceUpdate()
+  handleSubmit(event) {
+    event.preventDefault();
+    console.log("TODO: handleSubmit", this.state.searchKeyword);
+  }
 
-    this.setState({
-      searchKeyword: event.target.value
+  handleReset() {
+    // this.setState({ searchKeyword: "" });
+
+    this.setState(() => {
+      return { searchKeyword: "" }
+    }, () => {
+      console.log("TODO: handleReset", this.state.searchKeyword);
     })
+  }
+
+  handleChangeInput(event) {
+    const searchKeyword = event.target.value;
+
+    if(searchKeyword <= 0) {
+      return this.handleReset();
+    }
+
+    this.setState({ searchKeyword });
   }
 
   render() {
@@ -23,15 +39,20 @@ class App extends React.Component {
           <h2 className="container">검색</h2>
         </header>
         <div className="container">
-          <form>
+          <form
+            onSubmit={(event) => this.handleSubmit(event)}
+            onReset={() => this.handleReset()}
+          >
             <input
               type="text"
               placeholder="검색어를 입력하세요"
               autoFocus
               value={this.state.searchKeyword}
-              onChange={event => this.handleChangeInput(event)}
+              onChange={(event) => this.handleChangeInput(event)}
             />
-            <button type="reset" className="btn-reset"></button>
+            {this.state.searchKeyword.length > 0 && (
+              <button type="reset" className="btn-reset"></button>
+            )}
           </form>
         </div>
       </>
