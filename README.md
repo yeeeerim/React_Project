@@ -8,4 +8,4 @@
 
 ## 3. [Search Form - react ver]()
 - skills : `React` `ReactDOM` `Babel` `JSX`
-- function : `상태 관리` `조건부 렌더링`
+- function : `상태 관리` `조건부 렌더링` `리스트와 키`
