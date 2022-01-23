@@ -13,4 +13,4 @@
 
 ## 4. [Components and Props]()
 - skills : `React` `ReactDOM` `Babel` `JSX` `webpack`
-- function : `component` `react developer tools` `props`
+- function : `component` `react developer tools` `props` `상속` `컴포넌트 담기` `state 끌어올리기` `최적화`
