@@ -60,7 +60,7 @@ function VideoUploadPage(props) {
           url: response.data.filePath,
           fileName: response.data.fileName,
         };
-        setFilePath(response.data.url);
+        setFilePath(response.data.filePath);
         Axios.post("/api/video/thumbnails", variable).then((response) => {
           if (response.data.success) {
             console.log(response.data);
