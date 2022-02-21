@@ -10,7 +10,10 @@
 - skills : `React` `ReactDOM` `Babel` `JSX`
 - function : `state` `조건부 렌더링` `리스트와 키` `검색폼` `검색결과` `탭` `추천 검색어` `최근 검색어`
 
-
 ## 4. [Components and Props]()
 - skills : `React` `ReactDOM` `Babel` `JSX` `webpack`
 - function : `component` `react developer tools` `props` `상속` `컴포넌트 담기` `state 끌어올리기` `최적화`
+
+## 5. [Youtube Site]()
+- skills : `React` `nodejs` `mongoDB` `Redux`
+- function : `비디오 업로드` `썸네일 생성` `댓글` `구독` `좋아요/싫어요`
